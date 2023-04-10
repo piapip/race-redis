@@ -12,5 +12,5 @@ if [ -n "$vol" ]; then
     docker volume rm $(docker volume ls -q)
 fi;
 docker network rm redis-default
-docker-compose --file docker/Redis/docker-compose-redis-replicas.yml build
-docker-compose --file docker/Redis/docker-compose-redis-replicas.yml up -d
+docker-compose --file ./docker-compose.yaml build
+docker-compose --file ./docker-compose.yaml up -d
